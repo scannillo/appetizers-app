@@ -21,6 +21,7 @@
 		802241D52ABDFD2F006D7CA4 /* AppetizerListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802241D42ABDFD2F006D7CA4 /* AppetizerListViewModel.swift */; };
 		802241D72ABDFF78006D7CA4 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802241D62ABDFF78006D7CA4 /* Alert.swift */; };
 		802241D92ABE1B70006D7CA4 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802241D82ABE1B70006D7CA4 /* LoadingView.swift */; };
+		802241DD2ABE1ECC006D7CA4 /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802241DC2ABE1ECC006D7CA4 /* RemoteImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		802241D42ABDFD2F006D7CA4 /* AppetizerListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizerListViewModel.swift; sourceTree = "<group>"; };
 		802241D62ABDFF78006D7CA4 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		802241D82ABE1B70006D7CA4 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		802241DC2ABE1ECC006D7CA4 /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				802241BE2ABDE9FC006D7CA4 /* Preview Content */,
 				802241D62ABDFF78006D7CA4 /* Alert.swift */,
 				802241D82ABE1B70006D7CA4 /* LoadingView.swift */,
+				802241DC2ABE1ECC006D7CA4 /* RemoteImage.swift */,
 			);
 			path = Appetizers;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 				802241D52ABDFD2F006D7CA4 /* AppetizerListViewModel.swift in Sources */,
 				802241BB2ABDE9F8006D7CA4 /* AppetizerTabView.swift in Sources */,
 				802241D92ABE1B70006D7CA4 /* LoadingView.swift in Sources */,
+				802241DD2ABE1ECC006D7CA4 /* RemoteImage.swift in Sources */,
 				802241B92ABDE9F8006D7CA4 /* AppetizersApp.swift in Sources */,
 				802241D12ABDF87A006D7CA4 /* NetworkManager.swift in Sources */,
 				802241CF2ABDF272006D7CA4 /* AppetizerCell.swift in Sources */,
