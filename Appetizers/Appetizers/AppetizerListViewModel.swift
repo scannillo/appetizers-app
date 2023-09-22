@@ -9,7 +9,9 @@ import SwiftUI
 
 final class AppetizerListViewModel: ObservableObject {
     
+    // Published so that any time it changes, we broadcast the changes to whoever is listening
     @Published var appetizers: [Appetizer] = []
+    @Published var alertItem: AlertItem?
     
     init() {
         getAppetizers()
@@ -17,12 +19,21 @@ final class AppetizerListViewModel: ObservableObject {
     
     func getAppetizers() {
         NetworkManager.shared.getAppetizers { result in
-            DispatchQueue.main.async {
+            DispatchQueue.main.async { [self] in
                 switch result {
                 case .success(let appetizers):
                     self.appetizers = appetizers
                 case .failure(let error):
-                    print(error.localizedDescription)
+                    switch error {
+                    case .invalidURL:
+                        alertItem = AlertContext.invalidURL
+                    case .invalidResponse:
+                        alertItem = AlertContext.invalidResponse
+                    case .invalidData:
+                        alertItem = AlertContext.invalidData
+                    case .unableToComplete:
+                        alertItem = AlertContext.unableToComplete
+                    }
                 }
             }
         }
