@@ -12,14 +12,18 @@ final class AppetizerListViewModel: ObservableObject {
     // Published so that any time it changes, we broadcast the changes to whoever is listening
     @Published var appetizers: [Appetizer] = []
     @Published var alertItem: AlertItem?
+    @Published var isLoading = false
     
     init() {
         getAppetizers()
     }
     
     func getAppetizers() {
+        isLoading = true
         NetworkManager.shared.getAppetizers { result in
             DispatchQueue.main.async { [self] in
+                isLoading = false
+                
                 switch result {
                 case .success(let appetizers):
                     self.appetizers = appetizers
